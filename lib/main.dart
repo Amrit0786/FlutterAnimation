@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/implicit_animation.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,11 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Center(
-        child: Text(
-          "Checkout other branches for Animation samples",
-        ),
-      ),
+      home: ImplicitAnimation(),
     );
   }
 }
