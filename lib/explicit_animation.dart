@@ -10,18 +10,21 @@ class _ExplicitAnimationState extends State<ExplicitAnimation>
   AnimationController animationController;
   Animation colorAnimation;
   Animation sizeAnimation;
+  Animation curve;
   bool isFav = false;
 
   @override
   void initState() {
     super.initState();
     animationController = AnimationController(
-      duration: Duration(milliseconds: 200),
+      duration: Duration(milliseconds: 300),
       vsync: this,
     );
 
-    colorAnimation = ColorTween(begin: Colors.grey, end: Colors.red)
-        .animate(animationController);
+    curve =
+        CurvedAnimation(parent: animationController, curve: Curves.slowMiddle);
+    colorAnimation =
+        ColorTween(begin: Colors.grey, end: Colors.red).animate(curve);
 
     sizeAnimation = TweenSequence([
       TweenSequenceItem(
@@ -32,7 +35,7 @@ class _ExplicitAnimationState extends State<ExplicitAnimation>
         tween: Tween<double>(begin: 300, end: 200),
         weight: 50,
       ),
-    ]).animate(animationController);
+    ]).animate(curve);
 
     animationController.addStatusListener((status) {
       if (status == AnimationStatus.dismissed) {
