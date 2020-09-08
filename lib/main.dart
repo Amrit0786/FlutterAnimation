@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/implicit_animation.dart';
+import 'package:flutter_animation/tween_animation.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ImplicitAnimation(),
+      home:
+          TweenAnimation(), // Change the class Name to see different types of animation
     );
   }
 }
