@@ -32,6 +32,7 @@ class _TweenAnimationState extends State<TweenAnimation> {
                   ),
                   duration: Duration(seconds: 1),
                   tween: Tween<double>(begin: 0, end: 1),
+                  curve: Curves.easeIn,
                   builder: (context, val, child) {
                     return Opacity(
                       child: Padding(
