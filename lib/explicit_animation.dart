@@ -52,6 +52,12 @@ class _ExplicitAnimationState extends State<ExplicitAnimation>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
