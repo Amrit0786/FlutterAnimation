@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/animating_together.dart';
 import 'package:flutter_animation/implicit_animation.dart';
 import 'package:flutter_animation/tween_animation.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home:
-          TweenAnimation(), // Change the class Name to see different types of animation
+          AnimatingTogether(), // Change the class Name to see different types of animation
     );
   }
 }
